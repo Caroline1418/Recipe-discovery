@@ -1,0 +1,28 @@
+.categories {
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+.categories ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.categories li {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.categories li:hover {
+  transform: translateY(-2px);
+  background-color: #e9ecef;
+}
