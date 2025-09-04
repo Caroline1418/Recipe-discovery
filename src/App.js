@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Categories from './components/Categories/Categories';
-// import heroImage from './assets/hero-image.jpg';
+import Cards from './components/Cards/cards';
 
 function App() {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <div className="App">
-      <header 
-        // className="App-hero" 
-        // style={{
-        //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${heroImage})`
-        // }}
-        >
+      <Categories onCategorySelect={handleCategorySelect} />
+      <main className="main-content">
         <div className="hero-content">
           <h1>Recipe Discovery</h1>
-          <p>Welcome to Recipe Discovery! Start exploring delicious recipes.</p>
+          <p>Explore delicious recipes from around the world</p>
         </div>
-      </header>
-      <Categories />
+        <Cards category={selectedCategory} />
+      </main>
     </div>
   );
 }

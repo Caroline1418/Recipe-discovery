@@ -1,5 +1,47 @@
 .App {
+  min-height: 100vh;
+  padding-left: 250px;
+  background-color: #f8f9fa;
+}
+
+.main-content {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.main-content h1 {
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.hero-content {
   text-align: center;
+  padding: 1rem 0 2rem;
+}
+
+.hero-content p {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0.5rem auto;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding-left: 0;
+    padding-top: 60px;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .main-content h1 {
+    font-size: 1.75rem;
+  }
 }
 
 /* .App-hero {
